@@ -14,7 +14,5 @@ RUN chmod +x /init.sh
 
 EXPOSE 3306
 
-#CMD ["tini", "--", "exim", "-bd"]
-#ENTRYPOINT ["tini", "--", "/init.sh"]
 ENTRYPOINT ["/init.sh"]
 
