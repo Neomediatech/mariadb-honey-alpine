@@ -1,11 +1,7 @@
 #!/bin/sh
 DB_DATA_PATH="/data/mariadb"
-DB_USER="a_fake_user_blabla6790"
-DB_PASS="ThisisNotveryLongPWD790_12KLJ"
-MAX_ALLOWED_PACKET="200M"
 
 rm -rf "${DB_DATA_PATH}"
-
 mkdir -p $DB_DATA_PATH ; chmod 777 $DB_DATA_PATH 
 chown -R mysql:mysql ${DB_DATA_PATH}
 
