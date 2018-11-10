@@ -20,7 +20,7 @@ version: '3'
 
 services:  
   mariadb:  
-    image: neomediatech/mariadb-honey-alpine-neo:latest  
+    image: neomediatech/mariadb-honey-alpine:latest  
     hostname: mariadb-honey  
     ports:  
       - '3306:3306'  
