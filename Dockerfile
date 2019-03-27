@@ -1,5 +1,5 @@
 # vim:set ft=dockerfile:
-FROM alpine
+FROM alpine:latest
 
 LABEL maintainer="docker-dario@neomediatech.it"
 
@@ -15,4 +15,3 @@ RUN chmod +x /init.sh
 EXPOSE 3306
 
 ENTRYPOINT ["/init.sh"]
-
