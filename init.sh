@@ -5,7 +5,7 @@ rm -rf "${DB_DATA_PATH}"
 mkdir -p $DB_DATA_PATH ; chmod 777 $DB_DATA_PATH 
 chown -R mysql:mysql ${DB_DATA_PATH}
 
-mysql_install_db --skip-auth-anonymous-user --skip-name-resolve --user=mysql --datadir=${DB_DATA_PATH} > /dev/null
+mysql_install_db --skip-name-resolve --user=mysql --datadir=${DB_DATA_PATH} > /dev/null
 
 DB_ROOT_PASS=`pwgen 24 1`
    echo "                                       ╔════════════════════════════════════════════════════╗"
