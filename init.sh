@@ -22,7 +22,9 @@ cat << EOF > $tfile
 USE mysql;
 FLUSH PRIVILEGES;
 GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' IDENTIFIED BY '$DB_ROOT_PASS' WITH GRANT OPTION;
+GRANT USAGE ON *.* TO '%'@'%' IDENTIFIED BY '$DB_ROOT_PASS';
 DROP DATABASE test;
+FLUSH PRIVILEGES;
 EOF
 
 /usr/bin/mysqld --user=mysql --bootstrap --verbose=1 < $tfile
