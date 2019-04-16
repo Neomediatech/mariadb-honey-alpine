@@ -10,6 +10,7 @@ RUN apk add --no-cache tini mariadb mariadb-client pwgen && \
 
 COPY init.sh /
 COPY my.cnf  /etc/mysql/
+COPY my.cnf  /etc/my.cnf.d/mariadb-server.cnf
 RUN chmod +x /init.sh
 
 EXPOSE 3306
